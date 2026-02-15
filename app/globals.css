@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* Google Stitch "portfolio For Work" design system */
+/* colorMode: DARK | font: SPACE_GROTESK | roundness: ROUND_EIGHT | customColor: #0da6f2 | saturation: 2 */
+
+:root {
+  --background: #fafafa;
+  --foreground: #0f0f0f;
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --border: #e4e4e7;
+  --primary: #0da6f2;
+  --primary-foreground: #ffffff;
+  --primary-glow: rgba(13, 166, 242, 0.4);
+  --accent: #a78bfa;
+  --accent-glow: rgba(167, 139, 250, 0.3);
+  --radius: 8px; /* ROUND_EIGHT from Stitch */
+}
+
+.dark {
+  --background: #0f0f0f;
+  --foreground: #fafafa;
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --border: #27272a;
+  --primary: #0da6f2;
+  --primary-foreground: #ffffff;
+  --primary-glow: rgba(13, 166, 242, 0.5);
+  --accent: #a78bfa;
+  --accent-glow: rgba(167, 139, 250, 0.4);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-glow: var(--primary-glow);
+  --color-accent: var(--accent);
+  --color-accent-glow: var(--accent-glow);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-geist-mono);
+  --radius-card: var(--radius);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Neon glow utilities (Stitch aesthetic) */
+.neon-border {
+  box-shadow: 0 0 0 1px var(--primary), 0 0 20px var(--primary-glow);
+}
+
+.neon-text {
+  text-shadow: 0 0 20px var(--primary-glow), 0 0 40px var(--primary-glow);
+}
+
+.hover-neon:hover {
+  box-shadow: 0 0 0 1px var(--primary), 0 0 24px var(--primary-glow), 0 0 48px var(--primary-glow);
+}
+
+.glass {
+  background: color-mix(in srgb, var(--card) 85%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
